@@ -1,0 +1,56 @@
+{
+  "name": "rclone-archive",
+  "version": "0.1.0",
+  "description": "rclone custom command to archive a remote path to another remote path",
+  "keywords": [
+    "rclone",
+    "archive"
+  ],
+  "homepage": "https://github.com/sntran/rclone-archive#readme",
+  "bugs": {
+    "url": "https://github.com/sntran/rclone-archive/issues",
+    "email": "rclone.js@sntran.com"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Sơn Trần-Nguyễn",
+    "email": "rclone.js@sntran.com",
+    "url": "https://sntran.com"
+  },
+  "files": [
+    "archive.js"
+  ],
+  "main": "archive.js",
+  "repository": "github:sntran/rclone-archive",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "yazl": "^2.5.1"
+  },
+  "peerDependencies": {
+    "rclone.js": ">=0.6.0"
+  },
+  "devDependencies": {
+    "rclone.js": "^0.6.0"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "os": [
+    "darwin",
+    "freebsd",
+    "linux",
+    "openbsd",
+    "sunos",
+    "win32"
+  ],
+  "cpu": [
+    "arm",
+    "arm64",
+    "mips",
+    "mipsel",
+    "x32",
+    "x64"
+  ]
+}
