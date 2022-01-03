@@ -121,10 +121,6 @@ async function archive(source, target, options = {}) {
     }
   }
 
-  outputStream.on("close", function() {
-    // DONE.
-  });
-
   zipfile.outputStream.pipe(outputStream);
 
   files.forEach(({ Path, Size, ModTime }) => {
@@ -142,9 +138,13 @@ async function archive(source, target, options = {}) {
   });
 
   return new Promise((resolve, reject) => {
-    zipfile.end((_size) => {
+    zipfile.end((size) => {
+      outputStream.on("close", function() {
       resolve(output);
     });
+    });
+
+    outputStream.on("error", reject);
   });
 }
 
